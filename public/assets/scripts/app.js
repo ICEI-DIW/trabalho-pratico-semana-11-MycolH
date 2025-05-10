@@ -61,7 +61,7 @@ const dadosCulinariaJaponesa = {
             "id": 3,
             "nome": "Udon",
             "descricao": "Macarrão fino e longo.",
-            "imagem": "Udon-img.png",
+            "imagem": "assets/scripts/Udon-img.png",
             "receita": `
                         <div class="receita">
                             <h3>Receita de Udon:</h3>
@@ -187,7 +187,7 @@ const dadosCulinariaJaponesa = {
                 "id": 8,
                 "nome": "Sunomono",
                 "descricao": "Salada fria de pepino com vinagre de arroz, às vezes com frutos do mar como polvo ou kani. Refrescante e levinha!",
-                "imagem": "Sunomono.png",
+                "imagem": "assets/scripts/Sunomono.png",
                 "receita": `
                                     <div class="receita">
                                         <h3>Receita de Sunomono:</h3>
@@ -273,7 +273,7 @@ const dadosCulinariaJaponesa = {
                 "id": 12,
                 "nome": "Kibi Dango",
                 "descricao": "Bolinhos pequenos e macios, feitos com farinha de arroz, muitas vezes cobertos com açúcar ou uma mistura de amido de milho.",
-                "imagem": "KibiDango.png",
+                "imagem": "assets/scripts/KibiDango.png",
                 "receita": `
                                     <div class="receita">
                                         <h3>Receita de Kibi Dango:</h3>
@@ -296,7 +296,7 @@ const dadosCulinariaJaponesa = {
                 "id": 13,
                 "nome": "Matcha-flavored sweets",
                 "descricao": "Matcha, ou chá verde em pó, é usado em várias sobremesas no Japão, como bolos, biscoitos e sorvetes.",
-                "imagem": "Matcha.png",
+                "imagem": "assets/scripts/Matcha.png",
                 "receita": `
                                     <div class="receita">
                                         <h3>Receita de Doces de Matcha:</h3>
