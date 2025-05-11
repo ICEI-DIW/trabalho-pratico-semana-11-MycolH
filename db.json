@@ -1,0 +1,26 @@
+{
+    "destaques": [
+      {
+        "id": 1,
+        "nome": "Sushi",
+        "descricao": "Peixe cru sobre arroz.",
+        "imagem": "https://cdn.pixabay.com/photo/2023/05/17/14/13/ai-generated-8000298_1280.jpg",
+        "receita": "<div class=\"receita\">\n  <h3>Receita de Sushi:</h3>\n  <h4>Ingredientes:</h4>\n  <ul>\n    <li>1 xícara de arroz japonês</li>\n    <li>1 ¼ xícara de água</li>\n    <li>2 colheres de sopa de vinagre de arroz</li>\n    <li>2 colheres de sopa de açúcar</li>\n    <li>1 colher de chá de sal</li>\n    <li>200g de peixe fresco (salmão, atum)</li>\n    <li>Alga nori</li>\n    <li>1 pepino (opcional)</li>\n    <li>Abacate (opcional)</li>\n    <li>Molho de soja, wasabi</li>\n  </ul>\n  <h4>Instruções:</h4>\n  <ol>\n    <li>Lave o arroz em água fria até que a água saia limpa.</li>\n    <li>Cozinhe o arroz com a água e deixe esfriar.</li>\n    <li>Prepare o vinagre temperado (vinagre, açúcar, sal) e misture no arroz cozido.</li>\n    <li>Enrole o arroz com o peixe e os outros ingredientes em folhas de alga nori.</li>\n    <li>Corte em rolos e sirva com molho de soja e wasabi.</li>\n  </ol>\n</div>"
+      },
+      {
+        "id": 2,
+        "nome": "Tempurá",
+        "descricao": "Vegetais, frutos do mar e carnes fritas.",
+        "imagem": "https://th.bing.com/th/id/OIP.xhqgDmK-bgpGGDeB6IJMSgHaE7?rs=1&pid=ImgDetMain&adlt=strict",
+        "receita": "<div class=\"receita\">\n  <h3>Receita de Tempurá:</h3>\n  <h4>Ingredientes:</h4>\n  <ul>\n    <li>1 xícara de farinha de trigo</li>\n    <li>1 ovo</li>\n    <li>1 xícara de água gelada</li>\n    <li>Frutos do mar (camarão, peixe) ou vegetais (batata-doce, cenoura, abóbora)</li>\n    <li>Óleo para fritar</li>\n    <li>Molho para tempurá</li>\n  </ul>\n  <h4>Instruções:</h4>\n  <ol>\n    <li>Prepare a massa: misture a farinha, ovo e água gelada até obter uma mistura ligeiramente grumosa.</li>\n    <li>Mergulhe os ingredientes na massa e frite em óleo quente até ficarem crocantes e dourados.</li>\n    <li>Escorra em papel toalha e sirva com molho para tempurá.</li>\n  </ol>\n</div>"
+      },
+      {
+        "id": 3,
+        "nome": "Udon",
+        "descricao": "Macarrão fino e longo.",
+        "imagem": "assets/scripts/Udon-img.png",
+        "receita": "<div class=\"receita\">\n  <h3>Receita de Udon:</h3>\n  <h4>Ingredientes:</h4>\n  <ul>\n    <li>200g de macarrão Udon</li>\n    <li>1 litro de caldo de peixe ou galinha</li>\n    <li>1 cebolinha picada</li>\n    <li>100g de cogumelos shiitake fatiados</li>\n    <li>1 ovo cozido (opcional)</li>\n    <li>Molho de soja, mirin e molho de peixe</li>\n  </ul>\n  <h4>Instruções:</h4>\n  <ol>\n    <li>Cozinhe o macarrão Udon conforme as instruções da embalagem.</li>\n    <li>Aqueça o caldo com molho de soja, mirin e molho de peixe.</li>\n    <li>Adicione os cogumelos e a cebolinha ao caldo.</li>\n    <li>Sirva o macarrão em uma tigela, despeje o caldo quente por cima e adicione o ovo cozido, se desejar.</li>\n  </ol>\n</div>"
+      }
+    ]
+  }
+  

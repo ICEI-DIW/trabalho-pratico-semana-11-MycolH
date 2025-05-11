@@ -1,4 +1,3 @@
-// Dados de culinária japonesa
 const dadosCulinariaJaponesa = {
     "destaques": [
         {
