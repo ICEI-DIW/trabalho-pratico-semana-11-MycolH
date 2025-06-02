@@ -18,7 +18,6 @@ Nessa etapa, vamos evoluir o projeto anterior e contemplar um ambiente de desenv
 ![alt text](image1.png))
 ![alt text](image.png))
 
-
 ## **Orientações Gerais**
 
 Nesse projeto você vai encontrar a seguinte estrutura base:
