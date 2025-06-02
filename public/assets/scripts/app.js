@@ -32,3 +32,45 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Erro ao carregar o JSON:", error);
         });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+          const params = new URLSearchParams(window.location.search);
+          const nome = params.get('nome');
+
+          if (!nome) {
+              document.getElementById('detalhes').innerHTML = `<p>Parâmetro 'nome' não encontrado na URL.</p>`;
+              return;
+          }
+
+          fetch('/db/db.json')
+            .then(response => response.json())
+            .then(data => {
+              const todosItens = [
+                ...data.destaques,
+                ...data.receitas.entradas,
+                ...data.receitas.principais,
+                ...data.receitas.sobremesas
+              ];
+
+              const item = todosItens.find(i => i.nome === nome);
+
+              if (item) {
+                document.getElementById('nome-prato').textContent = item.nome;
+                document.getElementById('detalhes').innerHTML = `
+                  <div class="col-12">
+                      <p class="mt-4">${item.descricao}</p>
+                      <img src="${item.imagem}" alt="${item.nome}" class="img-fluid my-3" />
+                      <div class="receita">${item.receita}</div>
+                  </div>
+                `;
+              } else {
+                document.getElementById('detalhes').innerHTML = `<p>Item não encontrado.</p>`;
+              }
+            })
+            .catch(err => {
+              console.error('Erro ao carregar o JSON:', err);
+              document.getElementById('detalhes').innerHTML = `<p>Erro ao carregar os dados.</p>`;
+            });
+      });

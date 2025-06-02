@@ -15,7 +15,9 @@ Nessa etapa, vamos evoluir o projeto anterior e contemplar um ambiente de desenv
 
 **Print da aba NETWORK com requisições Fetch/XHR**
 
-<<  COLOQUE A IMAGEM AQUI >>
+![alt text](image1.png))
+![alt text](image.png))
+
 
 ## **Orientações Gerais**
 
