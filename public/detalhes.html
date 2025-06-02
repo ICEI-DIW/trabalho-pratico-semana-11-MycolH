@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Detalhes da Receita</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <style>
         .receita {
             margin-top: 20px;
@@ -29,43 +29,52 @@
     <div class="container">
         <h1 class="my-4" id="nome-prato"></h1>
         
-        <div id="detalhes" class="row"></div>
+        <div id="detalhes" class="row">
+          <p>Carregando...</p>
+        </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const nome = params.get('nome');
+      document.addEventListener('DOMContentLoaded', () => {
+          const params = new URLSearchParams(window.location.search);
+          const nome = params.get('nome');
 
-            if (nome) {
-                const item = encontrarItemPorNome(nome);
+          if (!nome) {
+              document.getElementById('detalhes').innerHTML = `<p>Parâmetro 'nome' não encontrado na URL.</p>`;
+              return;
+          }
 
-                if (item) {
-                    document.getElementById('nome-prato').textContent = item.nome;
-                    document.getElementById('detalhes').innerHTML = `
-                        <div class="col-12">
-                            <p class="mt-4">${item.descricao}</p>
-                            <div class="mt-4">${item.receita}</div>
-                        </div>
-                    `;
-                } else {
-                    document.getElementById('detalhes').innerHTML = `<p>Item não encontrado.</p>`;
-                }
-            } else {
-                document.getElementById('detalhes').innerHTML = `<p>Parâmetro 'nome' não encontrado na URL.</p>`;
-            }
-        });
+          fetch('/db/db.json')
+            .then(response => response.json())
+            .then(data => {
+              const todosItens = [
+                ...data.destaques,
+                ...data.receitas.entradas,
+                ...data.receitas.principais,
+                ...data.receitas.sobremesas
+              ];
 
-        function encontrarItemPorNome(nome) {
-            return [
-                ...dadosCulinariaJaponesa.destaques,
-                ...dadosCulinariaJaponesa.receitas.entradas,
-                ...dadosCulinariaJaponesa.receitas.principais,
-                ...dadosCulinariaJaponesa.receitas.sobremesas
-            ].find(item => item.nome === nome);
-        }
+              const item = todosItens.find(i => i.nome === nome);
+
+              if (item) {
+                document.getElementById('nome-prato').textContent = item.nome;
+                document.getElementById('detalhes').innerHTML = `
+                  <div class="col-12">
+                      <p class="mt-4">${item.descricao}</p>
+                      <img src="${item.imagem}" alt="${item.nome}" class="img-fluid my-3" />
+                      <div class="receita">${item.receita}</div>
+                  </div>
+                `;
+              } else {
+                document.getElementById('detalhes').innerHTML = `<p>Item não encontrado.</p>`;
+              }
+            })
+            .catch(err => {
+              console.error('Erro ao carregar o JSON:', err);
+              document.getElementById('detalhes').innerHTML = `<p>Erro ao carregar os dados.</p>`;
+            });
+      });
     </script>
 
-    <script src="assets/scripts/app.js"></script> 
 </body>
 </html>
